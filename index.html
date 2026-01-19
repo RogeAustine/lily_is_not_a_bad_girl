@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>B站关注Roge_Austine</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-gamepad"></i> 消除大爻爻 ！！！ </h1>
+            <p class="subtitle">拖拽相邻糯米香香进行交换，三个以上相同即可消除！</p>
+        </header>
+
+        <div class="game-info">
+            <div class="info-box">
+                <div class="info-item">
+                    <span class="info-label"><i class="fas fa-clock"></i> 时间:</span>
+                    <span id="timer" class="info-value">05:00</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label"><i class="fas fa-star"></i> 得分:</span>
+                    <span id="score" class="info-value">0</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label"><i class="fas fa-sync-alt"></i> 步数:</span>
+                    <span id="moves" class="info-value">0</span>
+                </div>
+            </div>
+
+            <div class="controls">
+                <button id="restartBtn" class="btn">
+                    <i class="fas fa-redo"></i> 重新开始
+                </button>
+                <button id="helpBtn" class="btn btn-help">
+                    <i class="fas fa-question-circle"></i> 游戏说明
+                </button>
+            </div>
+        </div>
+
+        <div class="game-container">
+            <div id="gameBoard" class="game-board"></div>
+        </div>
+
+        <div class="footer">
+            <p>游戏规则：拖动相邻的两个爻爻交换位置，如果形成3个或以上相同的直线（横或竖），即可得分并消除！</p>
+        </div>
+    </div>
+
+    <!-- 帮助对话框 -->
+    <div id="helpDialog" class="dialog">
+        <div class="dialog-content">
+            <h2><i class="fas fa-info-circle"></i> 游戏说明</h2>
+            <ul class="help-list">
+                <li><i class="fas fa-mouse-pointer"></i> <strong>游戏目标：</strong>在5分钟内获得尽可能高的分数</li>
+                <li><i class="fas fa-exchange-alt"></i> <strong>操作方法：</strong>点击并拖动相邻的元素进行交换</li>
+                <li><i class="fas fa-bomb"></i> <strong>消除规则：</strong>三个或更多相同爻爻在一条直线上即可消除</li>
+                <li><i class="fas fa-gem"></i> <strong>元素类型：</strong>游戏中共有6种不同的萌物</li>
+                <li><i class="fas fa-trophy"></i> <strong>计分规则：</strong>3个消除得10分，每多1个加5分</li>
+                <li><i class="fas fa-hourglass-end"></i> <strong>时间限制：</strong>每局游戏5分钟</li>
+            </ul>
+            <button id="closeHelpBtn" class="btn">开始游戏</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
